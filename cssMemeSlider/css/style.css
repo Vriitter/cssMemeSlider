@@ -59,7 +59,7 @@ input[name='radio-btn'] {
 }
 
 .slider__container {
-   width: 30%;
+   width: 60%;
    overflow: hidden;
 }
 
@@ -93,8 +93,6 @@ input[name='radio-btn'] {
    background-color: #fff;
 }
 
-
-/* SLIDER */
 #radio1:checked ~ .slider__wrapper .slides .slide--active,
 #radio1:checked~.slider__panel .slider__container .slider__description-wrapper .slider__description--active  {
    margin-left: 0;
@@ -129,4 +127,22 @@ input[name='radio-btn'] {
 #radio3:checked~.slider__panel .slider__control label[for='radio3']:hover .control-point,
 #radio4:checked~.slider__panel .slider__control label[for='radio4']:hover .control-point {
    border-color: #fff;
+} 
+
+@media (max-width: 600px) {
+   .slider__panel {
+      flex-direction: column;
+      height: 10vw;
+   }
+
+   .slider__container {
+      order: 2;
+      width: 100%;
+   }
+
+   .slider__control {
+      order: 1;
+      width: 100%;
+      justify-content: center;
+   }
 }
