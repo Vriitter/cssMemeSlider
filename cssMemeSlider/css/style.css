@@ -5,4 +5,86 @@ html {
 body {
    font-family: "Raleway", sans-serif;
    font-weight: 400;
+   background-color: chocolate;
 }
+
+input {
+   display: none;
+}
+
+.slider {
+   width: 80vh;
+   height: 40vh;
+   margin: 2vw auto 0;
+}
+
+.slider__wrapper {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   border-radius: 10px;
+}
+
+.slides,
+.slider__description-wrapper {
+   display: flex;
+   width: 400%;
+   height: 100%;
+}
+
+.slide,
+.slider__description {
+   width: 25%;
+   color: #fff;
+   font-style: 2vw;
+   transition: all 1s ease;
+}
+
+.slide img {
+   width: 100%;
+}
+
+.slider__panel {
+   width: 80vw;
+   height: 5vw;
+   display: flex;
+   justify-content: space-between;
+   margin: 0 auto;
+   padding: 2vw;
+}
+
+.slider__container {
+   width: 30%;
+   overflow: hidden;
+}
+
+.slider__control {
+   display: flex;
+   justify-content: flex-end;
+   width: 20%;
+}
+
+.control {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 3vw;
+   height: 3vw;
+   border-radius: 50%;
+}
+
+.control-point {
+   width: 1.5vw;
+   height: 1.5vw;
+   background-color:crimson;
+   border-radius: 50%;
+   transition: all .5s ease;
+   cursor: pointer;
+}
+
+.control:hover .point {
+   transform: scale(1.1);
+   cursor: pointer;
+   background-color: #fff;
+}
+
