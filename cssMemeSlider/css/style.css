@@ -8,13 +8,13 @@ body {
    background-color: chocolate;
 }
 
-input {
+input[name='radio-btn'] {
    display: none;
 }
 
 .slider {
-   width: 80vh;
-   height: 40vh;
+   width: 80vw;
+   height: 40vw;
    margin: 2vw auto 0;
 }
 
@@ -32,13 +32,18 @@ input {
    height: 100%;
 }
 
+.slider {
+   transition: transform 0.5s ease-in-out;
+}
+
 .slide,
 .slider__description {
    width: 25%;
    color: #fff;
-   font-style: 2vw;
+   font-size: 2vw;
    transition: all 1s ease;
 }
+
 
 .slide img {
    width: 100%;
@@ -50,7 +55,7 @@ input {
    display: flex;
    justify-content: space-between;
    margin: 0 auto;
-   padding: 2vw;
+   padding-top: 2vw;
 }
 
 .slider__container {
@@ -78,7 +83,7 @@ input {
    height: 1.5vw;
    background-color:crimson;
    border-radius: 50%;
-   transition: all .5s ease;
+   transition: all 0.5s ease;
    cursor: pointer;
 }
 
@@ -88,3 +93,40 @@ input {
    background-color: #fff;
 }
 
+
+/* SLIDER */
+#radio1:checked ~ .slider__wrapper .slides .slide--active,
+#radio1:checked~.slider__panel .slider__container .slider__description-wrapper .slider__description--active  {
+   margin-left: 0;
+}
+ 
+#radio2:checked ~ .slider__wrapper .slides .slide--active,
+#radio2:checked~.slider__panel .slider__container .slider__description-wrapper .slider__description--active {
+   margin-left: -25%;
+}
+ 
+#radio3:checked ~ .slider__wrapper .slides .slide--active,
+#radio3:checked~.slider__panel .slider__container .slider__description-wrapper .slider__description--active {
+   margin-left: -50%;
+}
+ 
+#radio4:checked ~ .slider__wrapper .slides .slide--active,
+#radio4:checked~.slider__panel .slider__container .slider__description-wrapper .slider__description--active  {
+   margin-left: -75%;
+}
+
+
+#radio1:checked~.slider__panel .slider__control label[for='radio1'] .control-point,
+#radio2:checked~.slider__panel .slider__control label[for='radio2'] .control-point,
+#radio3:checked~.slider__panel .slider__control label[for='radio3'] .control-point,
+#radio4:checked~.slider__panel .slider__control label[for='radio4'] .control-point {
+   background-color: transparent;
+   border: 0.3vw solid crimson;
+}
+
+#radio1:checked~.slider__panel .slider__control label[for='radio1']:hover .control-point,
+#radio2:checked~.slider__panel .slider__control label[for='radio2']:hover .control-point,
+#radio3:checked~.slider__panel .slider__control label[for='radio3']:hover .control-point,
+#radio4:checked~.slider__panel .slider__control label[for='radio4']:hover .control-point {
+   border-color: #fff;
+}
