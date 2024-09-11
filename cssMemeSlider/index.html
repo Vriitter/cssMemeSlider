@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Css Meme Slider</title>
+   <link rel="stylesheet" href="./css/reset.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link rel="icon" href="./img/favicon-32x32.png">
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   <section class="slider">
+      <input type="radio" name="radio-btn" id="radio1" checked>
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+
+      <div class="slider__wrapper">
+         <ul class="slides">
+            <li class="slide slide--active">
+               <img src="./img/cute-cat1.jpg" alt="cute-cat">
+            </li>
+            <li class="slide">
+               <img src="./img/cute-cat2.jpg" alt="cute-cat">
+            </li>
+            <li class="slide">
+               <img src="./img/cute-cat3.jpg" alt="cute-cat">
+            </li>
+            <li class="slide">
+               <img src="./img/cute-cat4.jpg" alt="cute-cat">
+            </li>
+         </ul>
+      </div>
+
+      <div class="slider__panel">
+         <div class="slider__container">
+            <ul class="slider__description-wrapper">
+               <li class="slider__description slider__description--active">
+                  <span>Fluffy light kitten in the autumn forest</span>
+               </li>
+               <li class="slider__description">
+                  <span>Cute black blue-eyed kitten in the autumn forest</span>
+               </li>
+               <li class="slider__description">
+                  <span>Tabby kitten in a basket with apples</span>
+               </li>
+               <li class="slider__description">
+                  <span>Curious black kitten looking at autumn pumpkins</span>
+               </li>
+            </ul>
+         </div>
+
+         <div class="slider__control">
+            <label class="control" for="radio1">
+               <div class="control-point"></div>
+            </label>
+            <label class="control" for="radio2">
+               <div class="control-point"></div>
+            </label>
+            <label class="control" for="radio3">
+               <div class="control-point"></div>
+            </label>
+            <label class="control" for="radio4">
+               <div class="control-point"></div>
+            </label>
+         </div>
+      </div>
+   </section>
+</body>
+</html>
